@@ -16,3 +16,22 @@ export const getSmurf = () => dispatch => {
     })
 }
 
+export const addSmurf = (name, age, height) => dispatch => {
+    dispatch({ type: FETCH_SMURF })
+    const newId = Date.now();
+    axios.post(`http://localhost:3333/smurfs`, {
+        name: name,
+        age: age,
+        height: height,
+        id: newId
+    }).then(res => {
+        console.log(res)
+    }).catch(err => {
+        console.log('POST Error:', err)
+    })
+}
+
+export const removeSmurf = (id) => dispatch => {
+    dispatch({ type: DELETE_SMURF })
+    axios.delete(`http://localhost:3333/smurfs/${id}`).catch(err => console.log('REMOVE error:', err))
+}
