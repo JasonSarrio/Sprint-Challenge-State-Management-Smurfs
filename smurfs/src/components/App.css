@@ -1,3 +1,59 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.overlay {
+  position: fixed;
+  z-index: -2;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 200px;
+  background-color: rgba(0, 0, 0, 0.404);
+  padding-bottom: 20%;
+}
+
+body {
+  background-color: aqua;
+}
+
+html {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+form {
+  margin: 1% auto;
+  display:flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+input {
+  margin: 1% 0%;
+}
+
+button {
+  margin: 1%;
+}
+
+.smurf-bois {
+  width: 15%;
+  margin: 1%;
+  background-color: cadetblue;
+  border: .5px solid rgb(71, 117, 119);
+  color: white;
   text-align: center;
+  padding-bottom: 3%;
+  vertical-align: middle;
+}
+
+.smurf-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
