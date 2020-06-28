@@ -30,4 +30,5 @@ export const smurfsReducer = (state = initialState, action) => {
         default:
             return state;
     }
+    
 }
